@@ -1,5 +1,12 @@
 [
   {
+    "name": "About",
+    "path": "/About",
+    "component": "/home/owen/Documents/Software Projects/Nuxt/learning-nuxt-js-3013456/pages/About.vue",
+    "chunkName": "pages/About",
+    "_name": "_2c6e376c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/owen/Documents/Software Projects/Nuxt/learning-nuxt-js-3013456/pages/index.vue",

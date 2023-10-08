@@ -1,3 +1,8 @@
+export { default as Header } from '../../components/Header.vue'
+export { default as MainText } from '../../components/MainText.vue'
+export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
+export { default as Tutorial } from '../../components/Tutorial.vue'
+
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
   if (!options || !options.functional) {
