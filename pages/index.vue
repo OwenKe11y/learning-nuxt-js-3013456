@@ -1,8 +1,14 @@
 <template>
-  <h1>Hello World!</h1>
+  <div>
+    <h1>Hello World!</h1>
+    <button v-tooltip="'this is a button'">
+      Button
+    </button>
+  </div>
 </template>
 
 <script>
+import 'floating-vue/dist/style.css'
 export default {
   name: 'IndexPage'
 }
