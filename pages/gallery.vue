@@ -2,18 +2,29 @@
   <section>
     <div class="heading">
       <h1>Awesome Image Gallery</h1>
-      <p>Photo Credits:
+      <p>
+        Photo Credits:
         <a href="https://pixelford.com"> Pixelford.com </a>
       </p>
     </div>
     <section class="grid">
       <div
-        class="grid-item"
         v-for="(image, index) in images"
         :key="`image-${index}`"
+        class="grid-item"
       >
-        <img :src="image.url_small_size" :alt="image.title">
-        <p>{{ image.description }}</p>
+        <nuxt-img
+          width="300"
+          height="400"
+          fit="cover"
+          format="webp"
+          quality="90"
+          loading="lazy"
+          :src="image.url"
+          :alt="image.title"
+        >
+          <p>{{ image.title }}</p>
+        </nuxt-img>
       </div>
     </section>
   </section>
@@ -23,7 +34,7 @@
 export default {
   name: 'GalleryComponent',
   async asyncData ({ $http }) {
-    const res = await $http.$get('https://pixelford.com/api/image/category/1/qty/20')
+    const res = await $http.$get('https://jsonplaceholder.typicode.com/albums/1/photos')
     return {
       images: res
     }
