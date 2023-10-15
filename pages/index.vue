@@ -4,6 +4,21 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head () {
+    return {
+      meta: [
+        {
+          hid: 'title',
+          content: 'Home Page'
+        },
+
+        {
+          hid: 'description',
+          content: 'This is the Home Page'
+        }
+      ]
+    }
+  }
 }
 </script>
